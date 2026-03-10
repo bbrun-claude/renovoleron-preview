@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rénov'Oléron — Maçonnerie &amp; rénovation à Dolus d'Oléron (17)</title>
+<meta name="description" content="Rénov'Oléron, entreprise de maçonnerie à Dolus d'Oléron. Construction neuve, rénovation, agrandissement, salle de bain. RGE Qualibat. Devis gratuit : 06 11 46 68 60.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--blue:#1B3A6B;--blue-light:#2A5298;--orange:#E8841E;--orange-light:#F5A623;--dark:#1a1a1a;--gray:#555;--light:#f4f7fa;--white:#fff}
+body{font-family:'Open Sans',sans-serif;color:var(--dark);line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--orange);text-decoration:none}
+a:hover{color:var(--blue)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--white);box-shadow:0 2px 12px rgba(0,0,0,0.08)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:70px}
+.nav-logo{height:50px}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.88rem;color:var(--dark);letter-spacing:.3px;transition:color .2s}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{background:var(--orange);color:var(--white)!important;padding:10px 22px;border-radius:6px}
+.nav-cta:hover{background:var(--blue);color:var(--white)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.burger span{width:26px;height:3px;background:var(--dark);border-radius:2px;transition:.3s}
+
+/* HERO */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;margin-top:70px;background:linear-gradient(135deg,var(--blue) 0%,var(--blue-light) 100%)}
+.hero-img{position:absolute;right:0;top:0;bottom:0;width:55%;background-size:cover;background-position:center;opacity:.35}
+.hero-content{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:60px 24px;color:var(--white);width:100%}
+.hero-badges{display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+.hero-badge{background:rgba(255,255,255,.12);backdrop-filter:blur(6px);padding:8px 16px;border-radius:20px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:.8rem;border:1px solid rgba(255,255,255,.2)}
+.hero h1{font-family:'Montserrat',sans-serif;font-size:2.8rem;font-weight:800;line-height:1.15;margin-bottom:16px}
+.hero h1 span{color:var(--orange-light)}
+.hero p{font-size:1.15rem;max-width:520px;margin-bottom:32px;opacity:.9}
+.btn{display:inline-block;padding:14px 30px;border-radius:8px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;transition:all .3s;cursor:pointer;border:none}
+.btn-primary{background:var(--orange);color:var(--white)}
+.btn-primary:hover{background:var(--orange-light);color:var(--white);transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,132,30,.35)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.6);margin-left:12px}
+.btn-outline:hover{background:var(--white);color:var(--blue)}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* SECTIONS */
+section{padding:80px 24px}
+.section-title{font-family:'Montserrat',sans-serif;font-size:2.1rem;font-weight:700;text-align:center;margin-bottom:12px}
+.section-sub{text-align:center;color:var(--gray);max-width:600px;margin:0 auto 48px;font-size:1.02rem}
+.section-title::after{content:'';display:block;width:50px;height:4px;background:var(--orange);margin:12px auto 0;border-radius:2px}
+
+/* SERVICES */
+.services{background:var(--light)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.service-card{background:var(--white);border-radius:12px;padding:28px 24px;box-shadow:0 3px 14px rgba(0,0,0,.05);transition:transform .3s,box-shadow .3s;border-left:4px solid var(--orange)}
+.service-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.service-icon{font-size:2rem;margin-bottom:12px}
+.service-card h3{font-family:'Montserrat',sans-serif;font-size:1.1rem;margin-bottom:8px;color:var(--blue)}
+.service-card p{color:var(--gray);font-size:.92rem}
+
+/* REALISATIONS */
+.real-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+.real-card{border-radius:12px;overflow:hidden;position:relative;aspect-ratio:16/10;cursor:pointer}
+.real-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.real-card:hover img{transform:scale(1.05)}
+.real-overlay{position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(transparent,rgba(27,58,107,.8));color:var(--white);font-family:'Montserrat',sans-serif;font-weight:600;font-size:.9rem;opacity:0;transition:opacity .3s}
+.real-card:hover .real-overlay{opacity:1}
+
+/* CERTIF */
+.certif{background:var(--blue);color:var(--white);text-align:center}
+.certif .section-title{color:var(--white)}
+.certif .section-title::after{background:var(--orange)}
+.certif-grid{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;max-width:800px;margin:0 auto}
+.certif-item{display:flex;flex-direction:column;align-items:center;gap:8px}
+.certif-icon{font-size:2.4rem}
+.certif-label{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.95rem}
+.certif-desc{font-size:.85rem;opacity:.75;max-width:180px}
+
+/* CONTACT */
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1000px;margin:0 auto;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:20px}
+.contact-item{display:flex;gap:16px;align-items:flex-start}
+.contact-item .icon{font-size:1.6rem;min-width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--light);border-radius:10px}
+.contact-item h3{font-family:'Montserrat',sans-serif;font-size:.95rem;margin-bottom:2px;color:var(--blue)}
+.contact-item p{color:var(--gray);font-size:.92rem}
+.contact-item a{color:var(--orange)}
+.map{width:100%;height:350px;border:none;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.1)}
+
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:.85rem}
+footer a{color:var(--orange-light)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--white);flex-direction:column;padding:20px;gap:16px;box-shadow:0 8px 20px rgba(0,0,0,.1)}
+  .nav-links.open{display:flex}
+  .burger{display:flex}
+  .hero h1{font-size:2rem}
+  .hero p{font-size:1rem}
+  .hero-img{width:100%;opacity:.2}
+  .hero-badges{flex-direction:column;align-items:flex-start}
+  .hero-btns{flex-direction:column}
+  .btn-outline{margin-left:0}
+  .contact-wrap{grid-template-columns:1fr;gap:24px}
+  .real-grid{grid-template-columns:1fr}
+  .certif-grid{gap:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <img src="img/logo.jpg" alt="Rénov'Oléron" class="nav-logo">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Prestations</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="burger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img" style="background-image:url('img/slider2.jpg')"></div>
+  <div class="hero-content">
+    <div class="hero-badges">
+      <span class="hero-badge">RGE Qualibat</span>
+      <span class="hero-badge">Éco-artisan</span>
+      <span class="hero-badge">Île d'Oléron</span>
+    </div>
+    <h1>Maçonnerie &amp; rénovation<br>sur l'<span>île d'Oléron</span></h1>
+    <p>Construction neuve, rénovation et agrandissement. Un savoir-faire local au service de votre habitat sur l'île d'Oléron et le bassin de Marennes.</p>
+    <div class="hero-btns">
+      <a href="tel:0611466860" class="btn btn-primary">06 11 46 68 60</a>
+      <a href="#contact" class="btn btn-outline">Devis gratuit</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <h2 class="section-title">Nos prestations</h2>
+  <p class="section-sub">De la fondation aux finitions, Rénov'Oléron vous accompagne dans tous vos projets de construction et de rénovation.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">&#x1F3D7;</div>
+      <h3>Construction neuve</h3>
+      <p>Maison individuelle, garage, dépendance. Gros œuvre complet adapté aux contraintes insulaires de l'île d'Oléron.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F3E0;</div>
+      <h3>Rénovation</h3>
+      <p>Rénovation de maisons charentaises, reprise de maçonnerie, enduits de façade, ravalement. Respect du bâti ancien oléronais.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F6BF;</div>
+      <h3>Salle de bain</h3>
+      <p>Création et rénovation de salle de bain complète : plomberie, carrelage, faïence, douche à l'italienne.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F4D0;</div>
+      <h3>Agrandissement</h3>
+      <p>Extension de maison, surélévation, ouverture de murs porteurs. Agrandissez votre espace de vie en toute sérénité.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F331;</div>
+      <h3>Aménagements extérieurs</h3>
+      <p>Terrasses, murets, clôtures, allées. Des aménagements qui valorisent votre propriété sur l'île.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x2600;</div>
+      <h3>Performance énergétique</h3>
+      <p>Isolation, conformité RT2012 avec bureau d'étude intégré. Éco-artisan RGE pour vos travaux d'économie d'énergie.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REALISATIONS -->
+<section id="realisations">
+  <h2 class="section-title">Nos réalisations</h2>
+  <p class="section-sub">Quelques exemples de chantiers réalisés sur l'île d'Oléron et ses environs.</p>
+  <div class="real-grid">
+    <div class="real-card">
+      <img src="img/slider2.jpg" alt="Rénovation façade maison oléronaise" loading="lazy">
+      <div class="real-overlay">Rénovation de façade</div>
+    </div>
+    <div class="real-card">
+      <img src="img/real1.jpg" alt="Fondations construction neuve Oléron" loading="lazy">
+      <div class="real-overlay">Construction neuve — fondations</div>
+    </div>
+    <div class="real-card">
+      <img src="img/real3.jpg" alt="Maçonnerie murs et clôture" loading="lazy">
+      <div class="real-overlay">Maçonnerie &amp; clôtures</div>
+    </div>
+    <div class="real-card">
+      <img src="img/real2.jpg" alt="Rénovation bâtiment ancien" loading="lazy">
+      <div class="real-overlay">Rénovation bâtiment</div>
+    </div>
+    <div class="real-card">
+      <img src="img/real5.jpg" alt="Travaux de maçonnerie" loading="lazy">
+      <div class="real-overlay">Travaux de maçonnerie</div>
+    </div>
+    <div class="real-card">
+      <img src="img/slider4.jpg" alt="Agrandissement maison" loading="lazy">
+      <div class="real-overlay">Agrandissement</div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="certif" id="certifications">
+  <h2 class="section-title">Nos garanties</h2>
+  <div class="certif-grid">
+    <div class="certif-item">
+      <div class="certif-icon">&#x1F3C5;</div>
+      <div class="certif-label">Qualibat</div>
+      <div class="certif-desc">Certification qualité des travaux de bâtiment</div>
+    </div>
+    <div class="certif-item">
+      <div class="certif-icon">&#x1F33F;</div>
+      <div class="certif-label">RGE Éco-artisan</div>
+      <div class="certif-desc">Reconnu garant de l'environnement</div>
+    </div>
+    <div class="certif-item">
+      <div class="certif-icon">&#x1F6E1;</div>
+      <div class="certif-label">Décennale</div>
+      <div class="certif-desc">Assurance garantie décennale sur tous nos travaux</div>
+    </div>
+    <div class="certif-item">
+      <div class="certif-icon">&#x1F4CB;</div>
+      <div class="certif-label">Multirisque pro</div>
+      <div class="certif-desc">Assurance multirisque professionnelle</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title">Contactez-nous</h2>
+  <p class="section-sub">Devis gratuit et sans engagement. Nous intervenons sur toute l'île d'Oléron et le bassin de Marennes.</p>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="icon">&#x1F4DE;</div>
+        <div>
+          <h3>Téléphone</h3>
+          <p><a href="tel:0611466860">06 11 46 68 60</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">&#x2709;</div>
+        <div>
+          <h3>Email</h3>
+          <p><a href="mailto:renovoleron@sfr.fr">renovoleron@sfr.fr</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">&#x1F4CD;</div>
+        <div>
+          <h3>Adresse</h3>
+          <p>4 rue de la Poste<br>17550 Dolus d'Oléron</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">&#x1F552;</div>
+        <div>
+          <h3>Horaires</h3>
+          <p>Lundi au vendredi : 8h-12h / 13h30-18h<br>Samedi : 8h-12h</p>
+        </div>
+      </div>
+    </div>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5500!2d-1.24!3d45.88!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4801412aae5b4e6d%3A0x408ab2ae4bb22f0!2sDolus-d%27Ol%C3%A9ron!5e0!3m2!1sfr!2sfr" allowfullscreen loading="lazy" title="Rénov'Oléron Dolus d'Oléron"></iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 Rénov'Oléron — Maçonnerie &amp; rénovation — SIREN 801 863 796 — Dolus d'Oléron (17)</p>
+  <p>Site réalisé par <a href="https://claudeb-studio.vercel.app" target="_blank">Claude B. Studio</a></p>
+</footer>
+
+</body>
+</html>
